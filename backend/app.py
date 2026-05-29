@@ -46,11 +46,11 @@ def get_random_word():
 @app.route("/get_guess_word", methods=["GET"])
 def get_guess():
   data = request.get_json()
-  if not data or "guess" not in data:
+  if not data or "guess_word" not in data:
     return {"error": "No input"}, 400
   
-  guess = data["guess"]
-  if len(guess) != 5:
+  guess_word = data["guess_word"]
+  if len(guess_word) != 5:
     return {"error": "Not enough letters"}, 400
 
   valid_guesses = load_valid_guesses()
@@ -58,7 +58,7 @@ def get_guess():
     return {"error": "Not in word list"}, 400
 
   return {
-    "guess": guess
+    "guess_word": guess_word
   }
 
 # check for letter matches
