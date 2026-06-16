@@ -13,7 +13,7 @@ function Header() {
           <Typography 
             variant="h6" 
             component="div"
-            sx={{fontFamily: "inherit", fontWeight: "inherit", fontSize:  30}}>Wordle</Typography>
+            sx={{fontFamily: "inherit", fontWeight: "inherit", fontSize:  40}}>Wordle</Typography>
         </Toolbar>
       </AppBar>
     </Box>
